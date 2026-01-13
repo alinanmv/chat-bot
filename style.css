@@ -606,8 +606,8 @@ textarea {
 }
 .profile-content .close {
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 15px;
+  top: 15px;
 }
 .profile-content .user-data {
   margin-top: 30px;
@@ -615,9 +615,15 @@ textarea {
 .menu {
   display: none;
 }
+#close-side-bar{
+  display: none;
+}
 /*адаптивка*/
 
 @media (min-width: 768px) and (max-width: 839px) {
+  #close-side-bar{
+  display: flex;
+}
   .menu {
     display: flex;
   }
@@ -650,8 +656,124 @@ textarea {
 }
 }
 @media (min-width: 540px) and (max-width: 767px) {
+    #close-side-bar{
+  display: flex;
+}
+  .menu {
+    display: flex;
+  }
+  .chat-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 320px;
+    background: var(--bg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transform: translateX(-110%);
+    transition: 0.25s ease;
+    z-index: 1001;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat-bar.is-open {
+    transform: translateX(0);
+  }
+  .profile-drawer {
+    width: 100%;
+  }
+  .overlay.is-open {
+  opacity: 0;
+  pointer-events: auto;
+}
+
 }
 @media (min-width: 425px) and (max-width: 539px) {
+    #close-side-bar{
+  display: flex;
+}
+  .menu {
+    display: flex;
+  }
+  .chat-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: var(--bg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transform: translateX(-110%);
+    transition: 0.25s ease;
+    z-index: 1001;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+.search{
+  justify-content: space-between;
+}
+  .chat-bar.is-open {
+    transform: translateX(0);
+  }
+  .profile-drawer {
+    width: 100%;
+  }
+  .overlay.is-open {
+  opacity: 0;
+  pointer-events: auto;
+}
+.options button{
+  display: none;
+}
+.options button:last-child{
+  display: flex;
+}
 }
 @media (min-width: 280px) and (max-width: 423px) {
+    #close-side-bar{
+  display: flex;
+}
+  .menu {
+    display: flex;
+  }
+  .chat-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: var(--bg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transform: translateX(-110%);
+    transition: 0.25s ease;
+    z-index: 1001;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+.search{
+  justify-content: space-between;
+}
+  .chat-bar.is-open {
+    transform: translateX(0);
+  }
+  .profile-drawer {
+    width: 100%;
+  }
+  .overlay.is-open {
+  opacity: 0;
+  pointer-events: auto;
+}
+.options button{
+  display: none;
+}
+.options button:last-child{
+  display: flex;
+}
 }
