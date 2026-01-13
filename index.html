@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./normalize.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="chat-app">
+      
+      <aside class="chat-bar" id="chat-bar">
+        <div class="search flex-side">
+       
+          <div class="img-wrapper" id="openProfile">
+            <img src="./img/man_n1.png" alt="" />
+            <div
+              class="circle"
+              style="
+                background-color: rgb(3, 194, 3);
+                border: 2px solid white;
+             
+                border-radius: 50%;
+              "
+            ></div>
+          </div>
+          
+          <!--профиль-->
+<div class="overlay" id="overlay"></div>
+<aside class="profile-drawer" id="profileDrawer" aria-hidden="true">
+<div class="profile-content">
+  <svg  class="close" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" id="close-profile" >
+<path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="var(--close-icon)"/>
+</svg>
+<div class="user-data">
+   <div class="img-wrapper">
+              <img
+                src="img/man_n1.png"
+                alt=""
+                style="width: 100px; border-radius: 50%"
+              />
+            <div
+                class="circle"
+                style="
+                  background-color: rgb(3, 194, 3);
+                  border: 2px solid white;
+                 
+                  border-radius: 50%;
+                "
+              ></div>
+            </div>
+ <div class="data">
+              <strong>John Doe</strong>
+              <p>Admin</p>
+            </div>
+</div>
+<div class="info-block">
+  <p class="block-heading"> About</p>
+  <textarea name="" id="" style="width: 100%; padding: 8px;" id="bio"">Hey there, we’re just writing to let you know that you’ve been subscribed to a repository on GitHub.</textarea>
+</div>
+<div class="info-block">
+  <p class="block-heading">Status</p>
+  <div class="flex-side">
+<input type="radio" name="status" class="green">
+<label for="" >Online</label>
+  </div>
+   <div class="flex-side">
+<input type="radio" name="status" class=" yellow">
+<label for="" >Away</label>
+  </div>
+   <div class="flex-side">
+<input type="radio" name="status" class="red">
+<label for="">Do not Disturb</label>
+  </div>
+   <div class="flex-side">
+<input type="radio" name="status" class="default">
+<label for="">Offline</label>
+  </div>
+ 
+</div>
+<div class="info-block">
+  <p class="block-heading">Settings</p>
+  <div class="flex-side">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
+<path d="M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+     Two-step Verification
+  </div>
+   <div class="flex-side">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="var(--icon-color)" width="20px" height="20px" viewBox="0 0 48 48" data-name="Layer 1" id="Layer_1"><title/><path d="M40.62,28.34l-.87-.7A2,2,0,0,1,39,26.08V18A15,15,0,0,0,26.91,3.29a3,3,0,0,0-5.81,0A15,15,0,0,0,9,18v8.08a2,2,0,0,1-.75,1.56l-.87.7a9,9,0,0,0-3.38,7V37a4,4,0,0,0,4,4h8.26a8,8,0,0,0,15.47,0H40a4,4,0,0,0,4-4V35.36A9,9,0,0,0,40.62,28.34ZM24,43a4,4,0,0,1-3.44-2h6.89A4,4,0,0,1,24,43Zm16-6H8V35.36a5,5,0,0,1,1.88-3.9l.87-.7A6,6,0,0,0,13,26.08V18a11,11,0,0,1,22,0v8.08a6,6,0,0,0,2.25,4.69l.87.7A5,5,0,0,1,40,35.36Z"/></svg>
+    Notification
+  </div>
+   <div class="flex-side">
+   <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
+<path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      Invite Friends
+  </div>
+   <div class="flex-side">
+   <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none"  class="icon">
+<path d="M10 11V17" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 11V17" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 7H20"stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 7H12H18V18C18 19.6569 16.6569 21 15 21H9C7.34315 21 6 19.6569 6 18V7Z" stroke="var(--icon-color)"" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      Delete Account
+  </div>
+</div>
+<button type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="20px" height="20px" viewBox="0 0 24 24"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"/><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"/></svg>
+  Log Out</button>
+</div>
+</aside>
+          <div class="search-bar flex-side">
+           <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="icon">
+<path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <input type="text" placeholder="Search..." />
+            
+          </div>
+             <svg  class="close" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" id="close-side-bar">
+<path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="var(--close-icon)"/>
+</svg>
+        </div>
+        <div class="chat-bar-container">
+          <div class="list chats">
+            <p>Chats</p>
+            <div class="chat-item flex-side">
+              <div class="img-wrapper">
+                <img src="./img/man_n1.png" alt="" />
+                <div
+                  class="circle"
+                  style="
+                    background-color: rgb(3, 194, 3);
+                    border: 2px solid white;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                        right: -2px;
+    top: 30px;
+    position: absolute;
+                  "
+                ></div>
+              </div>
+              <div class="data">
+                <div class="name flex-side space">
+                  <strong>Waldemar Mannering</strong>
+                  <p class="last-time">5 Minutes</p>
+                </div>
+                <p>Refer Friend. Get Rewards.</p>
+              </div>
+            </div>
+            <div class="chat-item flex-side">
+              <div class="img-wrapper">
+                <img src="./img/man_n2.png" alt="" />
+                <div
+                  class="circle"
+                  style="
+                    background-color: grey;
+                    border: 2px solid white;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                        right: -2px;
+    top: 30px;
+    position: absolute;
+                  "
+                ></div>
+              </div>
+              <div class="data">
+                <div class="name flex-side space">
+                  <strong>Felecia Rower</strong>
+                  <p class="last-time">30 Minutes</p>
+                </div>
+                <p>I will purchase it for sure.</p>
+              </div>
+            </div>
+            <div class="chat-item flex-side">
+              <div class="img-wrapper">
+                <div
+                  class="profile-pic"
+                  style="
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: rgb(217, 253, 217);
+                    color: green;
+                    
+                  "
+                >
+                  CM
+                </div>
+                <div
+                  class="circle"
+                  style="
+                    background-color: red;
+                    border: 2px solid white;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                     right: -2px;
+    top: 30px;
+    position: absolute;
+                  "
+                ></div>
+              </div>
+              <div class="data">
+                <div class="name flex-side space">
+                  <strong>Calvin Moore</strong>
+                  <p class="last-time">1 Day</p>
+                </div>
+                <p>If it takes long you can mail inbox user</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <img src="./img/man_n2.png" alt="" />
+              <div class="data">
+                <strong>Natalie Maxwell</strong>
+                <p>UI/UX Designer</p>
+              </div>
+            </div>
+
+            <div class="contact-item flex-side">
+              <img src="./img/man_n3.png" alt="" />
+              <div class="data">
+                <strong>Jess Cook</strong>
+                <p>Business Analyst</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <div
+                class="profile-pic"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                  background-color: rgb(199, 199, 251);
+                  color: blue;
+                "
+              >
+                LM
+              </div>
+              <div class="data">
+                <strong>Louie Mason</strong>
+                <p>Resource Manager</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <img src="./img/man_n4.png" alt="" />
+              <div class="data">
+                <strong>Krystal Norton</strong>
+                <p>Business Executive</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <img src="./img/man_n5.png" alt="" />
+              <div class="data">
+                <strong>Stacy Garrison</strong>
+                <p>Marketing Ninja</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <div
+                class="profile-pic"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                  background-color: rgb(217, 253, 217);
+                  color: green;
+                "
+              >
+                CM
+              </div>
+              <div class="data">
+                <strong>Calvin Moore</strong>
+                <p>UX Designer</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <img src="./img/man_n6.png" alt="" />
+              <div class="data">
+                <strong>Mary Giles</strong>
+                <p>Account Department</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <img src="./img/man_n7.png" alt="" />
+              <div class="data">
+                <strong>Waldemar Mannering</strong>
+                <p>AWS Support</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <div
+                class="profile-pic"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                  background-color: rgb(255, 224, 224);
+                  color: red;
+                "
+              >
+                CM
+              </div>
+              <div class="data">
+                <strong>Amy Johnson</strong>
+                <p>Frontend Developer</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <img src="./img/man_n2.png" alt="" />
+              <div class="data">
+                <strong>Felecia Rower</strong>
+                <p>Cloud Engineer</p>
+              </div>
+            </div>
+            <div class="contact-item flex-side">
+              <img src="./img/man_n8.png" alt="" />
+              <div class="data">
+                <strong>William Stephens</strong>
+                <p>Backend Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section class="chat">
+       
+        <div class="chat-header">
+    <button type="button" id="side-nav">            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" class="menu">
+<path d="M4 6H20M4 12H20M4 18H20" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></button>
+          <div class="flex-side space content-row ">
+        
+          <div class="user flex-side">
+            <div class="img-wrapper">
+              <img
+                src="img/man_n2.png"
+                alt=""
+                style="width: 40px; border-radius: 50%"
+              />
+              <div
+                class="circle"
+                style="
+                  background-color: rgb(3, 194, 3);
+                  border: 2px solid white;
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                "
+              ></div>
+            </div>
+
+            <div class="data" id="open-modal">
+              <strong>Felecia Rower</strong>
+              <p>NextJS developer</p>
+            </div>
+            <!--модалка-->
+            <div id="modal-window" class="modal">
+            <div class="modal-content">
+                <svg  class="close" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" id="close-modal">
+<path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="var(--close-icon)"/>
+</svg>
+<div class="user-data">
+   <div class="img-wrapper">
+              <img
+                src="img/man_n2.png"
+                alt=""
+                style="width: 100px; border-radius: 50%"
+              />
+            <div
+                class="circle"
+                style="
+                  background-color: rgb(3, 194, 3);
+                  border: 2px solid white;
+                 
+                  border-radius: 50%;
+                "
+              ></div>
+            </div>
+ <div class="data">
+              <strong>Felecia Rower</strong>
+              <p>NextJS developer</p>
+            </div>
+</div>
+<div class="info-block">
+  <p class="block-heading">ABOUT</p>
+  <p>It is a long established fact that a reader will be <br> distracted by the readable content .</p>
+
+</div>
+<div class="info-block">
+  <p class="block-heading">Personal Information</p>
+ <div class="flex-side">
+<svg xmlns="http://www.w3.org/2000/svg" fill="var(--icon-color)" width="20px" height="20px" viewBox="0 0 32 32" class="icon">
+
+<title/>
+
+<g data-name="Layer 2" id="Layer_2">
+
+<path d="M29,11H3a1,1,0,0,0-1,1V29a1,1,0,0,0,1,1H29a1,1,0,0,0,1-1V12A1,1,0,0,0,29,11Zm-2.79,2L16,20.23,5.79,13ZM4,28V14.18l11.42,8.09a1,1,0,0,0,1.16,0L28,14.18V28Z"/>
+
+</g>
+
+</svg>
+ <p> josephGreen@email.com</p>
+ </div>
+  <div class="flex-side">
+<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none"  class="icon">
+<path d="M14.05 6C15.0268 6.19057 15.9244 6.66826 16.6281 7.37194C17.3318 8.07561 17.8095 8.97326 18 9.95M14.05 2C16.0793 2.22544 17.9716 3.13417 19.4163 4.57701C20.8609 6.01984 21.7721 7.91101 22 9.94M18.5 21C9.93959 21 3 14.0604 3 5.5C3 5.11378 3.01413 4.73086 3.04189 4.35173C3.07375 3.91662 3.08968 3.69907 3.2037 3.50103C3.29814 3.33701 3.4655 3.18146 3.63598 3.09925C3.84181 3 4.08188 3 4.56201 3H7.37932C7.78308 3 7.98496 3 8.15802 3.06645C8.31089 3.12515 8.44701 3.22049 8.55442 3.3441C8.67601 3.48403 8.745 3.67376 8.88299 4.05321L10.0491 7.26005C10.2096 7.70153 10.2899 7.92227 10.2763 8.1317C10.2643 8.31637 10.2012 8.49408 10.0942 8.64506C9.97286 8.81628 9.77145 8.93713 9.36863 9.17882L8 10C9.2019 12.6489 11.3501 14.7999 14 16L14.8212 14.6314C15.0629 14.2285 15.1837 14.0271 15.3549 13.9058C15.5059 13.7988 15.6836 13.7357 15.8683 13.7237C16.0777 13.7101 16.2985 13.7904 16.74 13.9509L19.9468 15.117C20.3262 15.255 20.516 15.324 20.6559 15.4456C20.7795 15.553 20.8749 15.6891 20.9335 15.842C21 16.015 21 16.2169 21 16.6207V19.438C21 19.9181 21 20.1582 20.9007 20.364C20.8185 20.5345 20.663 20.7019 20.499 20.7963C20.3009 20.9103 20.0834 20.9262 19.6483 20.9581C19.2691 20.9859 18.8862 21 18.5 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <p>+1(123) 456 - 7890</p>
+ </div>
+ 
+  <div class="flex-side">
+<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none"  class="icon">
+<path d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <p>Mon - Fri 10AM - 8PM</p>
+ </div>
+  
+</div>
+<div class="info-block">
+  <p class="block-heading">Options</p>
+  <div class="flex-side">
+<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" class="icon">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6L7.5 5.25H16.5L17.25 6V19.3162L12 16.2051L6.75 19.3162V6ZM8.25 6.75V16.6838L12 14.4615L15.75 16.6838V6.75H8.25Z" fill="var(--icon-color)"/>
+</svg>
+ <p> Add Tag</p>
+ </div>
+  <div class="flex-side">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none"  class="icon">
+<path d="M11.245 4.174C11.4765 3.50808 11.5922 3.17513 11.7634 3.08285C11.9115 3.00298 12.0898 3.00298 12.238 3.08285C12.4091 3.17513 12.5248 3.50808 12.7563 4.174L14.2866 8.57639C14.3525 8.76592 14.3854 8.86068 14.4448 8.93125C14.4972 8.99359 14.5641 9.04218 14.6396 9.07278C14.725 9.10743 14.8253 9.10947 15.0259 9.11356L19.6857 9.20852C20.3906 9.22288 20.743 9.23007 20.8837 9.36432C21.0054 9.48051 21.0605 9.65014 21.0303 9.81569C20.9955 10.007 20.7146 10.2199 20.1528 10.6459L16.4387 13.4616C16.2788 13.5829 16.1989 13.6435 16.1501 13.7217C16.107 13.7909 16.0815 13.8695 16.0757 13.9507C16.0692 14.0427 16.0982 14.1387 16.1563 14.3308L17.506 18.7919C17.7101 19.4667 17.8122 19.8041 17.728 19.9793C17.6551 20.131 17.5108 20.2358 17.344 20.2583C17.1513 20.2842 16.862 20.0829 16.2833 19.6802L12.4576 17.0181C12.2929 16.9035 12.2106 16.8462 12.1211 16.8239C12.042 16.8043 11.9593 16.8043 11.8803 16.8239C11.7908 16.8462 11.7084 16.9035 11.5437 17.0181L7.71805 19.6802C7.13937 20.0829 6.85003 20.2842 6.65733 20.2583C6.49056 20.2358 6.34626 20.131 6.27337 19.9793C6.18915 19.8041 6.29123 19.4667 6.49538 18.7919L7.84503 14.3308C7.90313 14.1387 7.93218 14.0427 7.92564 13.9507C7.91986 13.8695 7.89432 13.7909 7.85123 13.7217C7.80246 13.6435 7.72251 13.5829 7.56262 13.4616L3.84858 10.6459C3.28678 10.2199 3.00588 10.007 2.97101 9.81569C2.94082 9.65014 2.99594 9.48051 3.11767 9.36432C3.25831 9.23007 3.61074 9.22289 4.31559 9.20852L8.9754 9.11356C9.176 9.10947 9.27631 9.10743 9.36177 9.07278C9.43726 9.04218 9.50414 8.99359 9.55657 8.93125C9.61593 8.86068 9.64887 8.76592 9.71475 8.57639L11.245 4.174Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <p>Important Contact</p>
+ </div>
+ 
+  <div class="flex-side">
+ <svg xmlns="http://www.w3.org/2000/svg" fill="var(--icon-color)" width="20px" height="20px" viewBox="0 0 24 24"  class="icon">
+
+<g fill-rule="evenodd">
+
+<path d="M5 19h14V5H5v14zM19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+
+<path d="M9 14l2.03 2.71L14 13l4 5H6"/>
+
+</g>
+
+</svg>
+ <p>Shared Media</p>
+ </div>
+   <div class="flex-side">
+<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none"  class="icon">
+<path d="M10 11V17" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 11V17" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 7H20"stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 7H12H18V18C18 19.6569 16.6569 21 15 21H9C7.34315 21 6 19.6569 6 18V7Z" stroke="var(--icon-color)"" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <p>Delete Contact</p>
+ </div>
+  <div class="flex-side">
+<svg xmlns="http://www.w3.org/2000/svg" width="20px" height=20px" viewBox="0 0 24 24" fill="none  class="icon">
+<path d="M18.364 5.63604C19.9926 7.26472 21 9.51472 21 12C21 16.9706 16.9706 21 12 21C9.51472 21 7.26472 19.9926 5.63604 18.364M18.364 5.63604C16.7353 4.00736 14.4853 3 12 3C7.02944 3 3 7.02944 3 12C3 14.4853 4.00736 16.7353 5.63604 18.364M18.364 5.63604L5.63604 18.364" stroke="var(--icon-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <p>Block Contact</p>
+ </div>
+</div>
+<button type="button" id="delete-contact" class="delete">Delete Contact
+  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
+<path d="M10 11V17" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 11V17" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 7H12H18V18C18 19.6569 16.6569 21 15 21H9C7.34315 21 6 19.6569 6 18V7Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</button>
+            </div>
+
+
+            </div>
+          </div>
+          <div class="options flex-side">
+            <button type="button" id="toggle-theme">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" class="icon">
+<path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+             
+            </button>
+            <button type="button">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 24 24" fill="none" class="icon">
+<path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+            <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 24 24" fill="none" class="icon">
+<path d="M16 10L18.5768 8.45392C19.3699 7.97803 19.7665 7.74009 20.0928 7.77051C20.3773 7.79703 20.6369 7.944 20.806 8.17433C21 8.43848 21 8.90095 21 9.8259V14.1741C21 15.099 21 15.5615 20.806 15.8257C20.6369 16.056 20.3773 16.203 20.0928 16.2295C19.7665 16.2599 19.3699 16.022 18.5768 15.5461L16 14M6.2 18H12.8C13.9201 18 14.4802 18 14.908 17.782C15.2843 17.5903 15.5903 17.2843 15.782 16.908C16 16.4802 16 15.9201 16 14.8V9.2C16 8.0799 16 7.51984 15.782 7.09202C15.5903 6.71569 15.2843 6.40973 14.908 6.21799C14.4802 6 13.9201 6 12.8 6H6.2C5.0799 6 4.51984 6 4.09202 6.21799C3.71569 6.40973 3.40973 6.71569 3.21799 7.09202C3 7.51984 3 8.07989 3 9.2V14.8C3 15.9201 3 16.4802 3.21799 16.908C3.40973 17.2843 3.71569 17.5903 4.09202 17.782C4.51984 18 5.07989 18 6.2 18Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+            <button type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" class="icon">
+<path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+            <button type="button">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" class="icon">
+<path d="M12 12H12.01M12 6H12.01M12 18H12.01M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12ZM13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17C12.5523 17 13 17.4477 13 18ZM13 6C13 6.55228 12.5523 7 12 7C11.4477 7 11 6.55228 11 6C11 5.44772 11.4477 5 12 5C12.5523 5 13 5.44772 13 6Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+          </div>
+          
+        </div></div>
+        <div class="chat-body">
+          <div class="messages">
+            <div class="msg-row outgoing">
+              <div class="msg-content">
+                <div class="bubble">
+                  <p>How can we help? We're here for you! 😄</p>
+                </div>
+
+                <div class="meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 24 24" fill="none" class="checks">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L8.41421 17C7.63316 17.7811 6.36683 17.781 5.58579 17L6.29289 16.2929L5.58579 17L2.29289 13.7071C1.90237 13.3166 1.90237 12.6834 2.29289 12.2929C2.68342 11.9024 3.31658 11.9024 3.70711 12.2929L7 15.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289ZM21.7071 7.29289C22.0976 7.68342 22.0976 8.31658 21.7071 8.70711L12.7071 17.7071C12.3166 18.0976 11.6834 18.0976 11.2929 17.7071C10.9024 17.3166 10.9024 16.6834 11.2929 16.2929L20.2929 7.29289C20.6834 6.90237 21.3166 6.90237 21.7071 7.29289Z" fill="#0F1729"/>
+</svg>
+                  <span class="time">10:00 AM</span>
+                </div>
+              </div>
+              <div class="img-wrapper">
+                <img class="avatar" src="img/man_n1.png" alt="" />
+              </div>
+            </div>
+
+            <div class="msg-row incoming">
+              <div class="img-wrapper">
+                <img src="img/man_n2.png" alt="" class="avatar" />
+              </div>
+              <div class="msg-content">
+                <div class="bubble">
+                  <p>
+                    Hey John, I am looking for the best admin template.
+                    <br />
+                    Could you please help me to find it out? 🤔
+                  </p>
+                </div>
+                <div class="bubble">
+                  <p>It should be Bootstrap 5 compatible.</p>
+                </div>
+                <div class="meta">
+                  <span class="time">10:02 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="msg-row outgoing">
+              <div class="msg-content">
+                <div class="bubble">
+                  <p>Sneat has all the components you'll ever need in a app.</p>
+                </div>
+
+                <div class="meta">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 24 24" fill="none" class="checks">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L8.41421 17C7.63316 17.7811 6.36683 17.781 5.58579 17L6.29289 16.2929L5.58579 17L2.29289 13.7071C1.90237 13.3166 1.90237 12.6834 2.29289 12.2929C2.68342 11.9024 3.31658 11.9024 3.70711 12.2929L7 15.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289ZM21.7071 7.29289C22.0976 7.68342 22.0976 8.31658 21.7071 8.70711L12.7071 17.7071C12.3166 18.0976 11.6834 18.0976 11.2929 17.7071C10.9024 17.3166 10.9024 16.6834 11.2929 16.2929L20.2929 7.29289C20.6834 6.90237 21.3166 6.90237 21.7071 7.29289Z" fill="#0F1729"/>
+</svg>
+                  <span class="time">10:03 AM</span>
+                </div>
+              </div>
+              <div class="img-wrapper">
+                <img class="avatar" src="img/man_n1.png" alt="" />
+              </div>
+            </div>
+
+            <div class="msg-row incoming">
+              <div class="img-wrapper">
+                <img src="img/man_n2.png" alt="" class="avatar" />
+              </div>
+              <div class="msg-content">
+                <div class="bubble"><p>Looks clean and fresh UI. 😃</p></div>
+                <div class="bubble">
+                  <p>It's perfect for my next project.</p>
+                </div>
+                <div class="bubble"><p>How can I purchase it?</p></div>
+                <div class="meta">
+                  <span class="time">10:05 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="msg-row outgoing">
+              <div class="msg-content">
+                <div class="bubble">
+                  <p>Thanks, you can purchase it.</p>
+                </div>
+
+                <div class="meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 24 24" fill="none" class="checks">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L8.41421 17C7.63316 17.7811 6.36683 17.781 5.58579 17L6.29289 16.2929L5.58579 17L2.29289 13.7071C1.90237 13.3166 1.90237 12.6834 2.29289 12.2929C2.68342 11.9024 3.31658 11.9024 3.70711 12.2929L7 15.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289ZM21.7071 7.29289C22.0976 7.68342 22.0976 8.31658 21.7071 8.70711L12.7071 17.7071C12.3166 18.0976 11.6834 18.0976 11.2929 17.7071C10.9024 17.3166 10.9024 16.6834 11.2929 16.2929L20.2929 7.29289C20.6834 6.90237 21.3166 6.90237 21.7071 7.29289Z" fill="#0F1729"/>
+</svg>
+                  <span class="time">10:06 AM</span>
+                </div>
+              </div>
+              <div class="img-wrapper">
+                <img class="avatar" src="img/man_n1.png" alt="" />
+              </div>
+            </div>
+
+            <div class="msg-row incoming">
+              <div class="img-wrapper">
+                <img src="img/man_n2.png" alt="" class="avatar" />
+              </div>
+              <div class="msg-content">
+                <div class="bubble"><p>I will purchase it for sure. 👍</p></div>
+                <div class="bubble"><p>Thanks.</p></div>
+                <div class="meta">
+                  <span class="time">10:08 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="msg-row outgoing">
+              <div class="msg-content">
+                <div class="bubble">
+                  <p>Great, Feel free to get in touch.</p>
+                </div>
+
+                <div class="meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 24 24" fill="none" class="checks">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L8.41421 17C7.63316 17.7811 6.36683 17.781 5.58579 17L6.29289 16.2929L5.58579 17L2.29289 13.7071C1.90237 13.3166 1.90237 12.6834 2.29289 12.2929C2.68342 11.9024 3.31658 11.9024 3.70711 12.2929L7 15.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289ZM21.7071 7.29289C22.0976 7.68342 22.0976 8.31658 21.7071 8.70711L12.7071 17.7071C12.3166 18.0976 11.6834 18.0976 11.2929 17.7071C10.9024 17.3166 10.9024 16.6834 11.2929 16.2929L20.2929 7.29289C20.6834 6.90237 21.3166 6.90237 21.7071 7.29289Z" fill="#0F1729"/>
+</svg>
+                  <span class="time">10:10 AM</span>
+                </div>
+              </div>
+              <div class="img-wrapper">
+                <img class="avatar" src="img/man_n1.png" alt="" />
+              </div>
+            </div>
+            <div class="msg-row incoming">
+              <div class="img-wrapper">
+                <img src="img/man_n2.png" alt="" class="avatar" />
+              </div>
+              <div class="msg-content">
+                <div class="bubble">
+                  <p>Do you have design files for Sneat?</p>
+                </div>
+
+                <div class="meta">
+                  <span class="time">10:15 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="msg-row outgoing">
+              <div class="msg-content">
+                <div class="bubble">
+                  <p>
+                    Yes that's correct documentation file, Design files are
+                    included with the template.
+                  </p>
+                </div>
+
+                <div class="meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 24 24" fill="none" class="checks">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L8.41421 17C7.63316 17.7811 6.36683 17.781 5.58579 17L6.29289 16.2929L5.58579 17L2.29289 13.7071C1.90237 13.3166 1.90237 12.6834 2.29289 12.2929C2.68342 11.9024 3.31658 11.9024 3.70711 12.2929L7 15.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289ZM21.7071 7.29289C22.0976 7.68342 22.0976 8.31658 21.7071 8.70711L12.7071 17.7071C12.3166 18.0976 11.6834 18.0976 11.2929 17.7071C10.9024 17.3166 10.9024 16.6834 11.2929 16.2929L20.2929 7.29289C20.6834 6.90237 21.3166 6.90237 21.7071 7.29289Z" fill="#0F1729"/>
+</svg>
+                  <span class="time">10:15 AM</span>
+                </div>
+              </div>
+              <div class="img-wrapper">
+                <img class="avatar" src="img/man_n1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-footer">
+          <div class="chat-input flex-side space">
+            <input type="text" placeholder="Type your message here..." />
+            <div class="input-buttons">
+              <button type="button">
+                <img src="img/mic.png" alt="" style="width: 18px" />
+              </button>
+              <button type="button" id="clip">
+                <img src="img/clip.png" alt="" style="width: 20px" />
+              </button>
+              <button type="button" id="send-btn">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
