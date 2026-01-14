@@ -83,7 +83,7 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  max-width: 230px;
+  max-width: 280px;
 }
 .search {
   display: flex;
@@ -750,6 +750,7 @@ li {
   .select-trigger {
     display: flex;
   }
+ 
 }
 @media (min-width: 425px) and (max-width: 539px) {
   #close-side-bar {
