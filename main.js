@@ -78,4 +78,19 @@ closeSideBarBtn.addEventListener("click", () => {
 
   document.body.classList.remove("no-scroll");
 });
-openSideBarBtn.addEventListener("click", openSideBar);
+
+
+//выпадающее меню
+const select = document.querySelector(".select");
+const trigger = document.querySelector(".select-trigger");
+
+if (select && trigger) {
+  trigger.addEventListener("click", () => {
+    select.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!select.contains(e.target)) select.classList.remove("open");
+  });
+}
+console.log("JS OK");
