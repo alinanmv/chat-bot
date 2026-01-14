@@ -79,7 +79,6 @@ closeSideBarBtn.addEventListener("click", () => {
   document.body.classList.remove("no-scroll");
 });
 
-
 //выпадающее меню
 const select = document.querySelector(".select");
 const trigger = document.querySelector(".select-trigger");

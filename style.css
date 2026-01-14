@@ -1,7 +1,7 @@
 :root {
   --bg: #fff;
   --border-color: 1px solid rgb(211, 211, 211);
-  --purple: #D60000;
+  --purple: #d60000;
   --incoming-msg-p: rgb(73, 73, 73);
   --outgoing-msg-p: #fff;
   --incoming-msg-bg: #fff;
@@ -11,18 +11,18 @@
   --text-primary: #22303e;
   --icon-color: rgb(37, 37, 37);
   --close-icon: black;
-  --icon-hover:  rgba(0, 0, 0, 0.04);;
+  --icon-hover: rgba(0, 0, 0, 0.04);
 }
 [data-theme="dark"] {
-  --bg: #1E222B;
-  --incoming-msg-p: #A0A4AE;
+  --bg: #1e222b;
+  --incoming-msg-p: #a0a4ae;
   --text-primary: white;
-  --chat-bg: #0F1115;
+  --chat-bg: #0f1115;
   --border-color: 1px solid #ffffff14;
-  --incoming-msg-bg: #1E222B;
+  --incoming-msg-bg: #1e222b;
   --icon-color: rgb(163, 162, 162);
   --close-icon: white;
-  --icon-hover: rgba(255, 255, 255, 0.06);;
+  --icon-hover: rgba(255, 255, 255, 0.06);
 }
 * {
   margin: 0;
@@ -244,9 +244,8 @@ button {
 }
 #clip {
   transform: rotate(-90deg);
-
 }
-#clip:hover{
+#clip:hover {
   background-color: var(--icon-hover);
 }
 .chat-input input {
@@ -410,13 +409,13 @@ button {
 }
 
 .chat-item:hover {
-  background-color: rgba(214, 0, 0, 0.12);;
+  background-color: rgba(214, 0, 0, 0.12);
   padding: 15px 0px;
   border-radius: 10px;
   padding: 15px 10px;
 }
 .chat-item.active:hover {
-  background-color: #D60000;
+  background-color: #d60000;
 }
 .icon path {
   stroke: var(--icon-color);
@@ -568,7 +567,7 @@ body.no-scroll {
 }
 .profile-content button {
   width: 100%;
-  background-color: #D60000;
+  background-color: #d60000;
   color: white;
   padding: 10px 0px;
   border-radius: 10px;
@@ -637,20 +636,20 @@ textarea {
   padding: 10px 0;
   min-width: 150px;
   display: none;
-  z-index: 1200; 
+  z-index: 1200;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   color: var(--text-primary);
 }
-.select-dropdown li{
-padding:10px 15px ;
+.select-dropdown li {
+  padding: 10px 15px;
 
-font-size: 15px;
-
+  font-size: 15px;
 }
-.select-dropdown li:hover{
+.select-dropdown li:hover {
   background-color: var(--icon-hover);
 }
-ul,li{
+ul,
+li {
   list-style: none;
   text-decoration: none;
 }
@@ -663,7 +662,6 @@ ul,li{
   border: none;
   cursor: pointer;
 }
-
 
 .select-trigger svg {
   pointer-events: none;
@@ -740,18 +738,18 @@ ul,li{
     opacity: 0;
     pointer-events: auto;
   }
-    .bubble p {
+  .bubble p {
     font-size: 15px;
-}
-.name strong{
-  font-size: 15px;
-}
-.name p:last-child {
+  }
+  .name strong {
+    font-size: 15px;
+  }
+  .name p:last-child {
     font-size: 13px;
-}
-.select-trigger{
-  display: flex;
-}
+  }
+  .select-trigger {
+    display: flex;
+  }
 }
 @media (min-width: 425px) and (max-width: 539px) {
   #close-side-bar {
@@ -789,20 +787,18 @@ ul,li{
     opacity: 0;
     pointer-events: auto;
   }
-.options > button {
-  display: none;
-}
-    .bubble p {
+  .options > button {
+    display: none;
+  }
+  .bubble p {
     font-size: 15px;
-}
-.name strong{
-  font-size: 15px;
-}
-.name p:last-child {
+  }
+  .name strong {
+    font-size: 15px;
+  }
+  .name p:last-child {
     font-size: 13px;
-}
-
-
+  }
 }
 @media (min-width: 280px) and (max-width: 424px) {
   #close-side-bar {
@@ -840,20 +836,18 @@ ul,li{
     opacity: 0;
     pointer-events: auto;
   }
-.options > button {
-  display: none;
-}
-    .bubble p {
+  .options > button {
+    display: none;
+  }
+  .bubble p {
     font-size: 15px;
-}
-.name strong{
-  font-size: 15px;
-}
-.name p:last-child {
+  }
+  .name strong {
+    font-size: 15px;
+  }
+  .name p:last-child {
     font-size: 13px;
-}
-
-
+  }
 }
 @media (min-width: 0px) and (max-width: 423px) {
   #close-side-bar {
@@ -892,19 +886,17 @@ ul,li{
     pointer-events: auto;
   }
 
-.options > button {
-  display: none;
-}
+  .options > button {
+    display: none;
+  }
 
-    .bubble p {
+  .bubble p {
     font-size: 15px;
-}
-.name strong{
-  font-size: 15px;
-}
-.name p:last-child {
+  }
+  .name strong {
+    font-size: 15px;
+  }
+  .name p:last-child {
     font-size: 13px;
-}
-
-
+  }
 }
