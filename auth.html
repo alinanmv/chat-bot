@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./auth.css" />
@@ -58,78 +57,3 @@
     <script src="./auth.js"></script>
   </body>
 </html>
-=======
-
-<head>
-	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" href="normalize.min.css" />
-	<link rel="stylesheet" href="auth.css" />
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>chatbot</title>
-</head>
-
-<body>
-	<div class="auth-page">
-		<div class="auth-card">
-			<div class="logo" style="display: flex; justify-content: center">
-				Sneat
-			</div>
-			<div class="content-side">
-				<h1>Welcome to Sneat! 👋</h1>
-				<p>
-					Please sign-in to your account and start the <br />
-					adventure
-				</p>
-			</div>
-			<div class="input">
-				<label for="">Email or Username</label>
-				<input type="text" placeholder="Enter your email or username" id="username" />
-			</div>
-			<div class="input">
-				<label for="">Password</label>
-				<input type="text" placeholder="......." id="password" />
-			</div>
-			<button type="button" id="login">Login</button>
-		</div>
-	</div>
-	<script>
-		const loginBtn = document.getElementById("login");
-		const usernameInput = document.getElementById("username");
-		const passwordInput = document.getElementById("password");
-		const BASEURL = 'http://localhost:3000'
-
-		loginBtn.addEventListener("click", () => {
-			if ( usernameInput.value.trim() === "" || passwordInput.value.trim() === "" ) {
-				alert("wrong username or password");
-			} else {
-				const xhr = new XMLHttpRequest();
-
-				xhr.open('POST', BASEURL + '/users');
-				xhr.setRequestHeader('Content-Type', 'application/json');
-
-				xhr.onload = () => {
-					if (xhr.status === 201) {
-						const res = JSON.parse(xhr.responseText);
-						document.cookie = `token=${res.data.token}; path=/;`
-						location.href = '/index.html'
-					} else {
-						console.error('Ошибка:', xhr.status, xhr.responseText);
-					}
-				};
-
-				xhr.onerror = () => {
-					console.error('Network error');
-				};
-
-				xhr.send(JSON.stringify({
-					username: usernameInput.value,
-					password: passwordInput.value
-				}));
-			}
-		});
-	</script>
-</body>
-
-</html>
->>>>>>> bf4ed4433e932e8ef7c44e905c708ec1b82a5862
