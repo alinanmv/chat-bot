@@ -2,55 +2,58 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="normalize.min.css" />
-    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="./auth.css" />
+    <link rel="stylesheet" href="./normalize.min.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chatbot</title>
+    <title>Auth</title>
   </head>
   <body>
-    <div class="auth-page">
-      <div class="auth-card">
-        <div class="logo" style="display: flex; justify-content: center">
-          Sneat
-        </div>
-        <div class="content-side">
-          <h1>Welcome to Sneat! 👋</h1>
-          <p>
-            Please sign-in to your account and start the <br />
-            adventure
-          </p>
-        </div>
-        <div class="input">
-          <label for="">Email or Username</label>
-          <input
-            type="text"
-            placeholder="Enter your email or username"
-            id="username"
+    <div class="form-page">
+      <button type="button" id="toggle-theme">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20px"
+          height="20px"
+          viewBox="0 0 24 24"
+          fill="none"
+          class="icon"
+        >
+          <path
+            d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
+        </svg>
+      </button>
+      <div class="card">
+        <div class="card-top">
+          <img src="./logo.svg" alt="" />
+          <h1>Авторизация</h1>
         </div>
-        <div class="input">
-          <label for="">Password</label>
-          <input type="text" placeholder="......." id="password" />
-        </div>
-        <button type="button" id="login">Login</button>
+        <form action="" id="form">
+          <div class="input-wrapper">
+            <label for="">E-mail</label>
+            <div class="input">
+              <input type="text" placeholder="Введите ваш логин" id="login" />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="">Телефон</label>
+            <div class="input">
+              <input
+                type="password"
+                placeholder="Введите ваш пароль"
+                id="password"
+              />
+            </div>
+          </div>
+          <button id="submit-button" type="button">Отправить</button>
+        </form>
       </div>
     </div>
-    <script>
-      const loginBtn = document.getElementById("login");
-      const usernameInput = document.getElementById("username");
-      const passwordInput = document.getElementById("password");
-
-      loginBtn.addEventListener("click", () => {
-        if (
-          usernameInput.value.trim() === "" ||
-          passwordInput.value.trim() === ""
-        ) {
-          alert("wrong username or password");
-        } else {
-          window.location.href = "index.html";
-        }
-      });
-    </script>
+    <script src="./auth.js"></script>
   </body>
 </html>

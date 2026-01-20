@@ -92,4 +92,14 @@ if (select && trigger) {
     if (!select.contains(e.target)) select.classList.remove("open");
   });
 }
-console.log("JS OK");
+//рандомные цвета 
+const colors = [
+  { bg: "rgb(217, 253, 217)", text: "rgb(0, 128, 0)" },   
+  { bg: "rgb(199, 199, 251)", text: "rgb(0, 0, 180)" },   
+  { bg: "rgb(255, 224, 224)", text: "rgb(180, 0, 0)" }   
+];
+document.querySelectorAll(".avatar-letters").forEach((el) => {
+  const c = colors[Math.floor(Math.random() * colors.length)];
+  el.style.backgroundColor = c.bg;
+  el.style.color = c.text;
+});
