@@ -726,6 +726,23 @@ li {
   justify-content: center;
   align-items: center;
 }
+.chat { display: none; }
+.chat.is-active { display: flex; }  
+.select-chat.is-hidden { display: none; }
+.select-chat{
+  display: flex;justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.select-chat p{
+color:var(--data-p);
+}
+.msg-icon{
+  color:  rgba(214, 0, 0, 0.12);
+}
 /*адаптивка*/
 
 @media (min-width: 769px) and (max-width: 839px) {

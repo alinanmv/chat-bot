@@ -1,12 +1,19 @@
 //темная тема
 const toggle = document.getElementById("toggle-theme");
 const html = document.documentElement;
-const BASEURL = 'http://localhost:3000'
 
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  html.setAttribute("data-theme", savedTheme);
+}
 toggle.onclick = () => {
-	const isDark = html.getAttribute("data-theme") === "dark";
-	html.setAttribute("data-theme", isDark ? "light" : "dark");
+  const isDark = html.getAttribute("data-theme") === "dark";
+  const newTheme = isDark ? "light" : "dark";
+
+  html.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
 };
+
 //ховеры на чат
 const chatItems = document.querySelectorAll(".chat-item, .contact-item");
 
@@ -104,6 +111,24 @@ document.querySelectorAll(".avatar-letters").forEach((el) => {
   const c = colors[Math.floor(Math.random() * colors.length)];
   el.style.backgroundColor = c.bg;
   el.style.color = c.text;
+});
+
+//tapalka na chati 
+const chat = document.querySelector(".chat");
+const chatSelect = document.querySelector(".select-chat");
+const chatList = document.querySelector(".chats"); 
+
+chatList.addEventListener("click", (e) => {
+  const item = e.target.closest(".chat-item");
+  if (!item) return;
+
+
+  chatList.querySelectorAll(".chat-item, .contact-item").forEach((el) => el.classList.remove("active"));
+  item.classList.add("active");
+
+
+  chat.style.display = "flex";      
+  chatSelect.style.display = "none";
 });
 
 
